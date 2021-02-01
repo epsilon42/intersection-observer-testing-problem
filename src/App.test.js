@@ -3,6 +3,7 @@ import App from './App';
 import 'intersection-observer';
 
 test('renders first 3 cards on initial render', () => {
+  // PASSES
   render(<App />);
   expect(screen.getAllByText('card ', {exact: false})).toHaveLength(3);
 });
