@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.Card {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+}
+
+.EndOfList {
+  height: 200px;
+}

@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import App from './App';
+import 'intersection-observer';
 
-test('renders learn react link', () => {
+test('renders first 3 cards on initial render', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getAllByText('card ', {exact: false})).toHaveLength(3);
+});
+
+test('renders all 12 cards when user has scrolled through to bottom of page', () => {
+  render(<App />);
+  // How to mock/trigger IntersectionObserver several times?
+  expect(screen.getAllByText('card ', {exact: false})).toHaveLength(12);
 });
